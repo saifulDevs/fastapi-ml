@@ -1,0 +1,13 @@
+
+
+services:
+  fastapi-ml:
+    build: .
+    container_name: fastapi-ml
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: always
